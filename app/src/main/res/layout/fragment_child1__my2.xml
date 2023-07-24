@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyFragment2">
+    tools:context=".Child1MyFragment2">
     <TextView
         android:layout_width="wrap_content"
-        android:text="Hello World : Fragment 2"
+        android:text="Hello World : Fragment 2 child"
         android:layout_height="wrap_content">
 
     </TextView>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_2"
+        android:id="@+id/recycler_view_3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item"/>
