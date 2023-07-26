@@ -7,21 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.oopsconcept.databinding.ActivityMainBinding
 import com.example.oopsconcept.databinding.FragmentMyBinding
 
 
 
 open class MyFragment1 : Fragment(),MyInterface {
-
+    private lateinit var binding: FragmentMyBinding
     private lateinit var adapter: MyAdapter
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var list: List<ListItemData>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -34,11 +31,9 @@ open class MyFragment1 : Fragment(),MyInterface {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        recyclerView = view.findViewById(R.id.recycler_view)
-        adapter = MyAdapter(this)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        adapter = MyAdapter(this,context)
+        binding.recyclerView.adapter = adapter
 
         adapter.submitList(itemlist)
 
