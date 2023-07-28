@@ -6,14 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.oopsconcept.databinding.FragmentMy2Binding
 
 
 abstract class MyFragment2 : Fragment(),MyInterface {
 
     private lateinit var adapter: MyAdapter
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var list: ArrayList<ListItemData>
+    private lateinit var binding: FragmentMy2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +28,9 @@ abstract class MyFragment2 : Fragment(),MyInterface {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        recyclerView = view.findViewById(R.id.recycler_view_2)
-        adapter = MyAdapter(this)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = adapter
+        adapter = MyAdapter(this,context)
+        binding.recyclerView2.layoutManager = LinearLayoutManager(context)
+        binding.recyclerView2.adapter = adapter
 
         adapter.submitList(itemlist)
 
