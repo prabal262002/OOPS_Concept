@@ -1,16 +1,23 @@
-package com.example.oopsconcept
+package com.example.oopsconcept.Fragments
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.oopsconcept.ListItemData
+import com.example.oopsconcept.MyAdapter
+import com.example.oopsconcept.MyInterface
+import com.example.oopsconcept.R
 import com.example.oopsconcept.databinding.FragmentMy2Binding
 
 
-class Child1MyFragment2 : MyFragment2() {
+abstract class MyFragment2 : Fragment(), MyInterface {
 
+    private lateinit var adapter: MyAdapter
     private lateinit var binding: FragmentMy2Binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -19,18 +26,28 @@ class Child1MyFragment2 : MyFragment2() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_my2, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = MyAdapter(this,context)
+        adapter = MyAdapter(this,context)
+        binding.recyclerView2.layoutManager = LinearLayoutManager(context)
         binding.recyclerView2.adapter = adapter
+
+        adapter.submitList(itemlist)
+
     }
+    private val itemlist = listOf<ListItemData>(
+        ListItemData(1,"Ram"),
+        ListItemData(2,"Shyam"),
+        ListItemData(3,"Harry"),
+        ListItemData(4,"Sejal")
+    )
 
     override fun myFunction(position: Int) {
-        super.myFunction(position)
-        val selectedItem = "Item $position"
-        Toast.makeText(requireContext(),selectedItem,Toast.LENGTH_SHORT).show()
+
     }
+
 }

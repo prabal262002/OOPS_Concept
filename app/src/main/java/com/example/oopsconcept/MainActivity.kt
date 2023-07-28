@@ -3,6 +3,8 @@ package com.example.oopsconcept
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.oopsconcept.Fragments.Child1MyFragment2
+import com.example.oopsconcept.Fragments.MyFragment1
 import com.example.oopsconcept.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
