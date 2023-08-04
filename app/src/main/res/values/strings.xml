@@ -6,4 +6,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="textview">TextView</string>
     <string name="_1">1</string>
+    <string name="inheritance_implementation">Inheritance Implementation</string>
+    <string name="abstraction_implementation">Abstraction Implementation</string>
 </resources>

@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.oopsconcept.ListItemData
-import com.example.oopsconcept.MyAdapter
-import com.example.oopsconcept.MyInterface
-import com.example.oopsconcept.R
+import com.example.oopsconcept.AdapterClass.MyAdapter
+import com.example.oopsconcept.Inheritance.MyInterface
+import com.example.oopsconcept.data.SampleData
 import com.example.oopsconcept.databinding.FragmentMyBinding
 
 
@@ -18,42 +17,39 @@ import com.example.oopsconcept.databinding.FragmentMyBinding
 open class MyFragment1 : Fragment(), MyInterface {
     private lateinit var binding: FragmentMyBinding
     private lateinit var adapter: MyAdapter
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private val itemlist = listOf<SampleData>(
+        SampleData(1,"Ram"),
+        SampleData(2,"Shyam"),
+        SampleData(3,"Harry"),
+        SampleData(4,"Garry"),
+        SampleData(5,"Snape"),
+        SampleData(6,"Potter"),
+        SampleData(7,"Ron"),
+        SampleData(8,"Weasley"),
+        SampleData(9,"Henry"),
+        SampleData(10,"Sejal")
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my, container, false)
+//        return inflater.inflate(R.layout.fragment_my, container, false)
+        binding = FragmentMyBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = MyAdapter(this,context)
-        binding.recyclerView.adapter = adapter
 
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        adapter = MyAdapter(this,requireContext())
+        binding.recyclerView.adapter = adapter
         adapter.submitList(itemlist)
 
     }
-    private val itemlist = listOf<ListItemData>(
-        ListItemData(1,"Ram"),
-        ListItemData(2,"Shyam"),
-        ListItemData(3,"Harry"),
-        ListItemData(4,"Garry"),
-        ListItemData(5,"Snape"),
-        ListItemData(6,"Potter"),
-        ListItemData(7,"Ron"),
-        ListItemData(8,"Weasley"),
-        ListItemData(9,"Henry"),
-        ListItemData(10,"Sejal")
-    )
+
     override fun myFunction(position: Int) {
         val selectedItem = itemlist[position]
         Toast.makeText(requireContext(),"Clicked On ${selectedItem.heading}",Toast.LENGTH_SHORT).show()

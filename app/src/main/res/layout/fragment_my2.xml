@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragments.MyFragment2">
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Hello World : Fragment 2"
-        android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    </TextView>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_2"
+    <data>
+
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item"/>
+        tools:context=".Fragments.MyFragment2">
 
-</FrameLayout>
+    </FrameLayout>
+</layout>
