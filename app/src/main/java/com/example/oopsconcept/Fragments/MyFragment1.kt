@@ -14,7 +14,7 @@ import com.example.oopsconcept.databinding.FragmentMyBinding
 
 
 
-open class MyFragment1 : Fragment(), MyInterface {
+open class  MyFragment1 : Fragment(), MyInterface {
     private lateinit var binding: FragmentMyBinding
     private lateinit var adapter: MyAdapter
     private val itemlist = listOf<SampleData>(

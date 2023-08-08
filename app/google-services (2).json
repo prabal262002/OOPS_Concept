@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "891030300874",
+    "project_id": "oops-concept-22c03",
+    "storage_bucket": "oops-concept-22c03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891030300874:android:93a7f3274e041935cb2c33",
+        "android_client_info": {
+          "package_name": "com.example.oopsconcept"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891030300874-su85851quev95lngt0i6d5o01e7inapu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oopsconcept",
+            "certificate_hash": "7bd6e563ca67c8a63ffd52ab46c3122b1c993628"
+          }
+        },
+        {
+          "client_id": "891030300874-fipkl5m80o1a60feunmkat279c7qcpe0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn9hF5SPP4uxW0ugHvciUejS2NOWtabJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891030300874-fipkl5m80o1a60feunmkat279c7qcpe0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

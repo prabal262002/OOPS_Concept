@@ -1,12 +1,15 @@
-package com.example.oopsconcept
+package com.example.oopsconcept.Activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.oopsconcept.Fragments.Child1MyFragment2
 import com.example.oopsconcept.Fragments.MyFragment1
+import com.example.oopsconcept.R
 import com.example.oopsconcept.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
@@ -14,6 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        binding.logoutBtn.setOnClickListener {
+
+            FirebaseAuth.getInstance().signOut()
+
+            val intent = Intent(this,LoginAndSignUpActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         binding.button1.setOnClickListener {
         val fragment = MyFragment1()

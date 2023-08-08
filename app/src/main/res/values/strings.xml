@@ -8,4 +8,10 @@
     <string name="_1">1</string>
     <string name="inheritance_implementation">Inheritance Implementation</string>
     <string name="abstraction_implementation">Abstraction Implementation</string>
+    <string name="welcome">Welcome</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="signup">SignUp</string>
+    <string name="client_id">891030300874-fipkl5m80o1a60feunmkat279c7qcpe0.apps.googleusercontent.com</string>
+    <string name="log_out">Log Out</string>
 </resources>

@@ -7,7 +7,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".Activities.MainActivity">
 
         <LinearLayout
             android:id="@+id/linearlayout"
@@ -18,7 +18,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
-
+            <Button
+                android:id="@+id/logoutBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:singleLine="false"
+                android:text="@string/log_out"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="20sp"
+                />
             <Button
                 android:id="@+id/button1"
                 style="?android:attr/buttonBarButtonStyle"
@@ -42,6 +53,7 @@
                 android:layout_margin="5dp"
                 android:textSize="20sp"
                 android:text="@string/abstraction_implementation" />
+
         </LinearLayout>
 
         <FrameLayout

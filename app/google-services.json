@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "891030300874",
+    "project_id": "oops-concept-22c03",
+    "storage_bucket": "oops-concept-22c03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891030300874:android:93a7f3274e041935cb2c33",
+        "android_client_info": {
+          "package_name": "com.example.oopsconcept"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891030300874-ihs5q1j96no3lpbhotft8o7linq5jbk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn9hF5SPP4uxW0ugHvciUejS2NOWtabJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891030300874-ihs5q1j96no3lpbhotft8o7linq5jbk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
